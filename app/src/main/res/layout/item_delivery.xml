@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clResturant">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userIv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_profile"
+                app:civ_circle_background_color="@color/accent_color"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montaseraat_medium"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/userIv"
+                app:layout_constraintStart_toEndOf="@+id/userIv"
+                app:layout_constraintTop_toTopOf="@+id/userIv" />
+
+            <TextView
+                android:id="@+id/orderedAtTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montaseraat_medium"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/userIv"
+                app:layout_constraintTop_toBottomOf="@+id/userIv" />
+
+
+            <TextView
+                android:id="@+id/scheduledForTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montaseraat_medium"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/userIv"
+                app:layout_constraintTop_toBottomOf="@+id/orderedAtTv" />
+
+            <TextView
+                android:id="@+id/totalCostTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montaseraat_medium"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/userIv"
+                app:layout_constraintTop_toBottomOf="@+id/scheduledForTv" />
+
+
+            <ImageView
+                android:id="@+id/showLocationIv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/circle_button_back"
+                android:scaleType="center"
+                android:src="@drawable/ic_location"
+                app:layout_constraintBottom_toTopOf="@+id/showCartBtn"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/showCartBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_background"
+                android:backgroundTint="#009688"
+                android:fontFamily="@font/montaseraat_medium"
+                android:text="Show Cart Info"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/totalCostTv"
+                tools:layout_editor_absoluteX="15dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pickUpBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_background"
+                android:backgroundTint="#009688"
+                android:fontFamily="@font/montaseraat_medium"
+                android:text="Pickup"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/showCartBtn" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deliveredBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_background"
+                android:backgroundTint="#009688"
+                android:fontFamily="@font/montaseraat_medium"
+                android:text="Delivered"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/showCartBtn" />
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView6"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_marginEnd="15dp"-->
+            <!--                android:background="@drawable/circle_button_back"-->
+            <!--                android:scaleType="center"-->
+            <!--                android:src="@drawable/ic_location"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintDimensionRatio="1"-->
+            <!--                app:layout_constraintEnd_toStartOf="@+id/imageView5"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/guideline4"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView6"-->
+            <!--                app:layout_constraintWidth_percent="0.15" />-->
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView7"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:background="@drawable/circle_button_back"-->
+            <!--                android:scaleType="center"-->
+            <!--                android:src="@drawable/ic_location"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintDimensionRatio="1"-->
+            <!--                app:layout_constraintEnd_toStartOf="@+id/guideline4"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/imageView8"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView6"-->
+            <!--                app:layout_constraintWidth_percent="0.15" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView8"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:background="@drawable/circle_button_back"-->
+            <!--                android:scaleType="center"-->
+            <!--                android:src="@drawable/ic_location"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:layout_marginStart="25dp"-->
+            <!--                app:layout_constraintDimensionRatio="1"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView6"-->
+            <!--                app:layout_constraintWidth_percent="0.15" />-->
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.5"
+                android:orientation="vertical" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

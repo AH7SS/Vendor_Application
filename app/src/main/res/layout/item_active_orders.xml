@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clResturant">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp">
+
+
+            <TextView
+                android:id="@+id/orderedAtTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montaseraat_medium"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/scheduledAtTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/montaseraat_medium"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orderedAtTv" />
+
+            <TextView
+                android:id="@+id/totalCostTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montaseraat_medium"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/scheduledAtTv"
+                app:layout_constraintTop_toBottomOf="@+id/scheduledAtTv" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/viewInfoTv"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:fontFamily="@font/montaseraat_medium"-->
+            <!--                android:text="Click to view ordered items"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="12sp"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/totalCostTv"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/totalCostTv" />-->
+
+            <ImageView
+                android:id="@+id/viewLocationIv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/circle_button_back"
+                android:scaleType="center"
+                android:src="@drawable/ic_location"
+                app:layout_constraintBottom_toTopOf="@+id/showCartBtn"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.15" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/showCartBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_background"
+                android:backgroundTint="#009688"
+                android:fontFamily="@font/montaseraat_medium"
+                android:text="Show Cart Info"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalCostTv"
+                tools:layout_editor_absoluteX="15dp" />
+
+            <!--            <androidx.appcompat.widget.AppCompatButton-->
+            <!--                android:id="@+id/button5"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="32dp"-->
+            <!--                android:background="@drawable/btn_guest"-->
+            <!--                android:paddingStart="8dp"-->
+            <!--                android:paddingRight="8dp"-->
+            <!--                android:text="Show info"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@+id/textView23"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/textView23"-->
+            <!--                app:layout_constraintTop_toTopOf="@+id/textView23" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

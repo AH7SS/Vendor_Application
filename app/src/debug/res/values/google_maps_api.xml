@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=E9:F2:CA:21:CB:33:32:17:F5:D8:0D:4F:B1:57:3C:1D:5A:11:B5:F2%3Bcom.app.shopifyuser
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.app.shopifyuser
+
+    SHA-1 certificate fingerprint:
+    E9:F2:CA:21:CB:33:32:17:F5:D8:0D:4F:B1:57:3C:1D:5A:11:B5:F2
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDnDNYVAA0vugWHozmokpJnUS7E_A-4kL0</string>
+</resources>
